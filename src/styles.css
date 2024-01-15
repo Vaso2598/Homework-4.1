@@ -1,0 +1,43 @@
+body{
+    background-color: #03071E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+button{
+    background: none;
+    border: 5px solid;
+    border-radius: 1em;
+    padding: 2em 4em;
+    color: #F72585;
+    font-size: 2em;
+    animation: 2s linear 1s infinite alternate flash;
+    transform: translateY(-0.25em);
+}
+
+@keyframes flash{
+    0%{color:#F72585; border-color: #F72585; box-shadow: 0 0.5em 0.5em -0.4em #F72585;}
+    25%{color:#B5179E; border-color: #B5179E; box-shadow: 0 0.5em 0.5em -0.4em #B5179E;}
+    50%{color:#7209B7; border-color: #7209B7; box-shadow: 0 0.5em 0.5em -0.4em #7209B7;}
+    75%{color:#4361EE; border-color: #4361EE; box-shadow: 0 0.5em 0.5em -0.4em #4361EE;}
+    100%{color:#4CC9F0; border-color: #4CC9F0; box-shadow: 0 0.5em 0.5em -0.4em #4CC9F0;}
+}
+
+@keyframes jump{
+    from{transform:translateY(0);}
+    to{transform: translateY(-0.25em);}
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+button:active{
+    transform: translateY(0.0em);
+}
+
+/* button:focus {
+    transform: translateY(0.0em);
+} */
